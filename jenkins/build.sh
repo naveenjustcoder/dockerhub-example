@@ -1,2 +1,3 @@
 #!/bin/bash
-docker build -t darinpope/dp-alpine:latest .
+DOCKER_IMAGE_NAME = 'naveenyash/ny-alpine:latest'
+docker build -t $DOCKER_IMAGE_NAME .
