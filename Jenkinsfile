@@ -4,12 +4,13 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
+    DOCKER_IMAGE_NAME = 'naveenyash/ny-alpine:latest'
     DOCKERHUB_CREDENTIALS = credentials('naveenyash-dockerhub')
   }
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t darinpope/dp-alpine:latest .'
+        sh 'docker build -t $DOCKER_IMAGE_NAME .'
       }
     }
     stage('Login') {
@@ -19,7 +20,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push naveenyash/dp-alpine:latest'
+        sh 'docker push $DOCKER_IMAGE_NAME'
       }
     }
   }
