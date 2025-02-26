@@ -1,2 +1,3 @@
 #!/bin/bash
-docker push darinpope/dp-alpine:latest
+DOCKER_IMAGE_NAME = 'naveenyash/ny-alpine:latest'
+docker push $DOCKER_IMAGE_NAME
