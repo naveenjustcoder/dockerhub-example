@@ -1,5 +1,5 @@
 #!/bin/bash
-DOCKER_IMAGE_NAME = 'naveenyash/ny-alpine:latest'
+DOCKER_IMAGE_NAME='naveenyash/ny-alpine:latest'
 
 
 echo $DOCKER_IMAGE_NAME
